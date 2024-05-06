@@ -14,11 +14,11 @@ public class WelcomePage implements ActionListener {
     JButton paymentOverviewButton = new JButton();
     JButton recordsOverviewButton= new JButton();
     JButton createRecordButton = new JButton();
-    JPanel createRecordFrame = new JPanel();
-    JPanel recordFrame = new JPanel();
-    JPanel memberFrame = new JPanel();
-    JPanel paymentFrame = new JPanel();
-    JPanel createMemberFrame = new JPanel();
+    JPanel createRecordPanel = new JPanel();
+    JPanel recordPanel = new JPanel();
+    JPanel memberPanel = new JPanel();
+    JPanel paymentPanel = new JPanel();
+    JPanel createMemberPanel = new JPanel();
 
 
 
@@ -58,30 +58,30 @@ public class WelcomePage implements ActionListener {
         createRecordButton.addActionListener(this);
         createRecordButton.setText("Create Record");
 
-        createRecordFrame.setBounds(0,100,1550,1000);
-        createRecordFrame.setVisible(false);
-        createRecordFrame.setBackground(Color.PINK);
+        createRecordPanel.setBounds(0,100,1550,1000);
+        createRecordPanel.setVisible(false);
+        createRecordPanel.setBackground(Color.PINK);
 
-        createMemberFrame.setBounds(0,100,1550,1000);
-        createMemberFrame.setVisible(false);
-        createMemberFrame.setBackground(Color.BLACK);
+        createMemberPanel.setBounds(0,100,1550,1000);
+        createMemberPanel.setVisible(false);
+        createMemberPanel.setBackground(Color.BLACK);
 
-        recordFrame.setBounds(0,100,1550,1000);
-        recordFrame.setVisible(false);
-        recordFrame.setBackground(Color.RED);
+        recordPanel.setBounds(0,100,1550,1000);
+        recordPanel.setVisible(false);
+        recordPanel.setBackground(Color.RED);
 
-        memberFrame.setBounds(0,100,1550,1000);
-        memberFrame.setVisible(false);
-        memberFrame.setBackground(Color.BLUE);
+        memberPanel.setBounds(0,100,1550,1000);
+        memberPanel.setVisible(false);
+        memberPanel.setBackground(Color.BLUE);
 
-        paymentFrame.setBounds(0,100,1550,1000);
-        paymentFrame.setVisible(false);
-        paymentFrame.setBackground(Color.yellow);
-
-
+        paymentPanel.setBounds(0,100,1550,1000);
+        paymentPanel.setVisible(false);
+        paymentPanel.setBackground(Color.yellow);
 
 
-        topPanel.add(welcomeLabel);
+
+
+        topPanel.add(welcomeLabel,BorderLayout.WEST);
         topPanel.add(createMemberButton);
         topPanel.add(memberOverviewButton);
         topPanel.add(paymentOverviewButton);
@@ -90,13 +90,12 @@ public class WelcomePage implements ActionListener {
         topPanel.add(logoutButton,BorderLayout.EAST);
 
 
-        homeFrame.add(memberFrame);
-        homeFrame.add(paymentFrame);
-        homeFrame.add(recordFrame);
-        homeFrame.add(createRecordFrame);
-        homeFrame.add(createMemberFrame);
+        homeFrame.add(memberPanel);
+        homeFrame.add(paymentPanel);
+        homeFrame.add(recordPanel);
+        homeFrame.add(createRecordPanel);
+        homeFrame.add(createMemberPanel);
         homeFrame.add(topPanel);
-        homeFrame.add(welcomeLabel);
         homeFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         homeFrame.setSize(1550,1200);
         homeFrame.setVisible(true);
@@ -111,39 +110,39 @@ public class WelcomePage implements ActionListener {
             LoginPage loginPage = new LoginPage(null);
         }
         if(e.getSource()== createMemberButton){
-            createMemberFrame.setVisible(true);
-            createRecordFrame.setVisible(false);
-            recordFrame.setVisible(false);
-            paymentFrame.setVisible(false);
-            memberFrame.setVisible(false);
+            createMemberPanel.setVisible(true);
+            createRecordPanel.setVisible(false);
+            recordPanel.setVisible(false);
+            paymentPanel.setVisible(false);
+            memberPanel.setVisible(false);
         }
         if(e.getSource()== memberOverviewButton){
-            memberFrame.setVisible(true);
-            createMemberFrame.setVisible(false);
-            createRecordFrame.setVisible(false);
-            recordFrame.setVisible(false);
-            paymentFrame.setVisible(false);
+            memberPanel.setVisible(true);
+            createMemberPanel.setVisible(false);
+            createRecordPanel.setVisible(false);
+            recordPanel.setVisible(false);
+            paymentPanel.setVisible(false);
         }
         if(e.getSource()== paymentOverviewButton){
-            memberFrame.setVisible(false);
-            createMemberFrame.setVisible(false);
-            createRecordFrame.setVisible(false);
-            recordFrame.setVisible(false);
-            paymentFrame.setVisible(true);
+            memberPanel.setVisible(false);
+            createMemberPanel.setVisible(false);
+            createRecordPanel.setVisible(false);
+            recordPanel.setVisible(false);
+            paymentPanel.setVisible(true);
         }
         if(e.getSource()== recordsOverviewButton){
-            memberFrame.setVisible(false);
-            createMemberFrame.setVisible(false);
-            createRecordFrame.setVisible(false);
-            recordFrame.setVisible(true);
-            paymentFrame.setVisible(false);
+            memberPanel.setVisible(false);
+            createMemberPanel.setVisible(false);
+            createRecordPanel.setVisible(false);
+            recordPanel.setVisible(true);
+            paymentPanel.setVisible(false);
         }
         if(e.getSource()== createRecordButton){
-            memberFrame.setVisible(false);
-            createMemberFrame.setVisible(false);
-            createRecordFrame.setVisible(true);
-            recordFrame.setVisible(false);
-            paymentFrame.setVisible(false);
+            memberPanel.setVisible(false);
+            createMemberPanel.setVisible(false);
+            createRecordPanel.setVisible(true);
+            recordPanel.setVisible(false);
+            paymentPanel.setVisible(false);
         }
 
     }

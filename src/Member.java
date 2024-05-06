@@ -13,7 +13,7 @@ public class Member {
     boolean svimteam;
     boolean under18;
 
-    public Member(int memberNumber, String firstName, String lastName, int day, int month, int year,boolean under18, boolean motionist, boolean medlemskab, boolean svimteam ) {
+    public Member(int memberNumber, String firstName, String lastName, int day, int month, int year,boolean under18, boolean isMotionist, boolean isActive, boolean svimteam ) {
         this.memberNumber = memberNumber;
         this.firstName = firstName;
         this.lastName = lastName;
