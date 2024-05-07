@@ -3,7 +3,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class WelcomePage implements ActionListener {
+public class WelcomePage implements ActionListener{
 
     JFrame homeFrame = new JFrame();
     JLabel welcomeLabel = new JLabel();
@@ -104,6 +104,7 @@ public class WelcomePage implements ActionListener {
 
     }
     public void actionPerformed(ActionEvent e){
+
         if(e.getSource()== logoutButton){
             homeFrame.dispose();
             @SuppressWarnings("unused")

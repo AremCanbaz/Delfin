@@ -1,8 +1,8 @@
 public class Main{
-    static Kontigent motionist = new Kontigent(1,"a","a",1,1,1,true,true,true,false, 0);
-    static Kontigent motionist1 = new Kontigent(1,"a","a",1,1,1,true,true,false,true, 0);
-    static Kontigent motionist3 = new Kontigent(1,"a","a",1,1,1,false,true,true,false, 0);
-    static Kontigent motionist4 = new Kontigent(1,"a","a",1,1,1,false,false,false,false, 0);
+    static Member motionist = new Member(1,"a","a",1,1,1,"Mand",true,false,true, true,0);
+    static Member motionist1 = new Member(1,"a","a",1,1,1,"Kvinde",true,false,false, true,0);
+    static Member motionist3 = new Member(1,"a","a",1,1,1960,"Kvinde",false,true,true, true,0);
+    static Member motionist4 = new Member(1,"a","a",1,1,1,"Mand",false,false,false, true,0);
     public static void main(String[] args) {
         String a;
         String c;
