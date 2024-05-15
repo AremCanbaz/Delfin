@@ -1,21 +1,37 @@
+import java.util.Scanner;
 public class Main{
-    static Member motionist = new Member(1,"a","a",1,1,1,"Mand",true,false,true, true,0);
-    static Member motionist1 = new Member(1,"a","a",1,1,1,"Kvinde",true,false,false, true,0);
-    static Member motionist3 = new Member(1,"a","a",1,1,1960,"Kvinde",false,true,true, true,0);
-    static Member motionist4 = new Member(1,"a","a",1,1,1,"Mand",false,false,false, true,0);
+    static CreateMember2 createMember2 = new CreateMember2();
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        String a;
-        String c;
-        IDPassword idpassword = new IDPassword();
-        LoginPage Loginpage = new LoginPage(idpassword.getLogininfo());
-        int getPrice = motionist.getPrice();
-        int getPrice1 = motionist1.getPrice();
-        int getPrice3 = motionist3.getPrice();
-        int getPrice4 = motionist4.getPrice();
+        while (true) {
+            System.out.println("Welcome to the main menu!\n" +
+                    "you have 5 options\n"+
+                    "1 = Create a member\n"
+            + "2 = View all members\n"
+            + "3 = View all paid or unpaid invoices\n"
+            +"4 = View all competitive records\n"
+            + "5 = Create a new competitive score");
+            int answer = 0;
+            answer = sc.nextInt();
+            switch (answer) {
+                case 1: {
+                    createMember2.createMember();
+                    break;
+                }
+                case 2: {
+                    createMember2.printMemberList();
+                    break;
+                }
+                case 3: {
+                    createMember2.printInvoices();
+                    break;
+                }
 
-        System.out.println(motionist.getPrice());
-        System.out.println(motionist1.getPrice());
-        System.out.println(motionist3.getPrice());
-        System.out.println(motionist4.getPrice());
+                default:
+                    System.out.println("Wrong choice, try again!\n "+
+                            "Remember to use a number this time:) ");
+            }
+        }
+
     }
-}
+    }

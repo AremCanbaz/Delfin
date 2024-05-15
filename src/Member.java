@@ -12,8 +12,9 @@ public class Member {
     String gender;
     boolean restance;
     int price;
+    boolean over60;
 
-    public Member(int memberNumber, String firstName, String lastName, int day, int month, int year, String gender, boolean under18, boolean isMotionist, boolean isActive, boolean restance, int price) {
+    public Member(int memberNumber, String firstName, String lastName, int day, int month, int year, String gender, boolean under18, boolean over60, boolean isMotionist, boolean isActive, boolean restance, int price) {
         this.memberNumber = memberNumber;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,6 +27,7 @@ public class Member {
         this.gender = gender;
         this.restance = restance;
         this.price = price;
+        this.over60 = over60;
     }
 
     public int getMemberNumber() {
@@ -59,12 +61,6 @@ public class Member {
     }
 
     public boolean under18() {
-        boolean under18;
-        if (year - 2024 > 18) {
-            under18 = true;
-        } else {
-            under18 = false;
-        }
         return under18;
     }
 
@@ -79,26 +75,9 @@ public class Member {
         return restance;
     }
     public int getPrice() {
-        if (!isActive()){
-            price = 500;
-            return price;
-        }
-        else if((year - 2024)<= 60 && isActive() && !under18()) {
-            price = 1200;
-            return price;
-        }
-
-        else if (under18 && isActive()){
-            price = 1000;
-            return price;
-        }
-        else if(!under18() && isActive()) {
-            price = 1600;
-            return price;
-        }
-        else {
-            price = 500;
-            return price;
-        }
+        return price;
+    }
+    public boolean isOver60() {
+        return over60;
     }
 }
