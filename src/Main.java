@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Main{
     static CreateMember2 createMember2 = new CreateMember2();
+    static CreateCompetitiveSwimmers createCompetitiveSwimmers = new CreateCompetitiveSwimmers(createMember2);
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         while (true) {
@@ -19,14 +20,17 @@ public class Main{
                     break;
                 }
                 case 2: {
-                    createMember2.printMemberList();
+                    createMember2.printmembers();
                     break;
                 }
                 case 3: {
                     createMember2.printInvoices();
                     break;
                 }
-
+                case 4: {
+                    createCompetitiveSwimmers.createCompetitiveSwimmers();
+                }
+                case 5:{ createCompetitiveSwimmers.printcompetitiveSwimmerso18();}
                 default:
                     System.out.println("Wrong choice, try again!\n "+
                             "Remember to use a number this time:) ");

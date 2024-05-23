@@ -40,7 +40,7 @@ public class CreateMember2 {
         }
         memberNumber++;
         System.out.println("Member " + memberNumber + " created");
-        memberList.put(memberNumber, new Member(memberNumber, firstName, lastName, day, month, year, gender, isUnder18(day, month, year), false,isMotionist, isActive, true, price(isOver60(day,month,year),isUnder18(day,month,year),isActive)));
+        memberList.put(memberNumber, new Member(memberNumber, firstName, lastName, day, month, year, gender, isUnder18(day, month, year), false, isMotionist, isActive, true, price(isOver60(day, month, year), isUnder18(day, month, year), isActive)));
     }
 
     public boolean isUnder18(int day, int month, int year) {
@@ -48,13 +48,14 @@ public class CreateMember2 {
         LocalDate today = LocalDate.now();
         return Period.between(date, today).getYears() < 18;
     }
+
     public boolean isOver60(int day, int month, int year) {
         LocalDate date = LocalDate.of(year, month, day);
         LocalDate today = LocalDate.now();
         return Period.between(date, today).getYears() >= 60;
     }
 
-    private int price(boolean over60, boolean under18, boolean isActive) {
+    public int price(boolean over60, boolean under18, boolean isActive) {
         int price = 1;
         if (!isActive) {
             price = 500;
@@ -77,9 +78,10 @@ public class CreateMember2 {
                 "Here is all the members for the union\n" + " ");
 
         for (Integer key : memberList.keySet()) {
-            System.out.println(key + ": " + "First Name: "+ memberList.get(key).firstName + " Last Name: " +  memberList.get(key).lastName + " Date of birth: " + memberList.get(key).day + "/" + memberList.get(key).month+ "/"+memberList.get(key).year+ " Price: " + memberList.get(key).price +"\n");
+            System.out.println(key + ": " + "First Name: " + memberList.get(key).firstName + " Last Name: " + memberList.get(key).lastName + " Date of birth: " + memberList.get(key).day + "/" + memberList.get(key).month + "/" + memberList.get(key).year + " Price: " + memberList.get(key).price + "\n");
         }
     }
+
     public void printInvoices() {
         System.out.println("Hi Welcome to Invoice site\n" +
                 "Here are all the invoices\n" + " ");
@@ -105,7 +107,22 @@ public class CreateMember2 {
 
     }
 
+    public void printmembers() {
+        for (Integer key : memberList.keySet()) {
+            System.out.println("Here is all the members");
+            System.out.println(key + ": " + "First Name: " + memberList.get(key).firstName + " Last Name: " + memberList.get(key).lastName + " Date of birth: " + memberList.get(key).day + "/" + memberList.get(key).month + "/" + memberList.get(key).year + " Price: ");
 
         }
+
+
+    }
+
+    public HashMap<Integer, Member> getMemberList() {
+        return memberList;
+    }
+    public void initializeMember(){
+
+    }
+}
 
 
