@@ -9,9 +9,9 @@ public class Main{
                     "you have 5 options\n"+
                     "1 = Create a member\n"
             + "2 = View all members\n"
-            + "3 = View all paid or unpaid invoices\n"
-            +"4 = View all competitive records\n"
-            + "5 = Create a new competitive score");
+            + "3 = View all paid or unpaid invoices\n" +
+                    "4 = Create a new competitive score \n"
+            +  "5 = View all competitive records");
             int answer = 0;
             answer = sc.nextInt();
             switch (answer) {
@@ -20,7 +20,7 @@ public class Main{
                     break;
                 }
                 case 2: {
-                    createMember2.printmembers();
+                    createMember2.printMemberList();
                     break;
                 }
                 case 3: {
@@ -30,9 +30,23 @@ public class Main{
                 case 4: {
                     createCompetitiveSwimmers.createCompetitiveSwimmers();
                 }
-                case 5:{ createCompetitiveSwimmers.printcompetitiveSwimmerso18();}
+                case 5:{
+                    System.out.println("Who do you want to see the score for ?\n " + "Under 18 = 1\n Over 18 = 2");
+                    int choice = sc.nextInt();
+                    switch (choice){
+                        case 1: {
+                            createCompetitiveSwimmers.printcompetitiveSwimmersu18();
+                            break;
+                        }
+                        case 2: {
+                            createCompetitiveSwimmers.printcompetitiveSwimmerso18();
+                            break;
+                        }
+                    }
+
+                }
                 default:
-                    System.out.println("Wrong choice, try again!\n "+
+                    System.out.println("Wrong choice, try again!\n"+
                             "Remember to use a number this time:) ");
             }
         }

@@ -2,19 +2,6 @@ import javax.sound.midi.SysexMessage;
 
 public class CompetetiveSwimmer extends Member {
 
-        int memberNumber;
-        String firstName;
-        String lastName;
-        int day;
-        int month;
-        int year;
-        boolean isMotionist;
-        boolean under18;
-        boolean isActive;
-        String gender;
-        boolean restance;
-        int price;
-        boolean over60;
         int swimDisicpleDay;
         int swimdiscipleMonth;
         int swimDiscipleYear;
@@ -28,5 +15,18 @@ public class CompetetiveSwimmer extends Member {
         this.swimDisciple= swimDisciple;
     }
 
+    public int getSwimDisciple() {
+        return swimDisciple;
+    }
+
+    public int getSwimdiscipleMonth() {
+        return swimdiscipleMonth;
+    }
+    public int getSwimdiscipleYear() {
+        return swimDiscipleYear;
+    }
+    public int getSwimDisicpleDay() {
+        return swimDisicpleDay;
+    }
 }
 

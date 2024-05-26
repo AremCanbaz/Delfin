@@ -60,7 +60,7 @@ public class Member {
         return gender;
     }
 
-    public boolean under18() {
+    public boolean isUnder18() {
         return under18;
     }
 
