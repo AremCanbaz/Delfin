@@ -4,14 +4,14 @@ import java.time.Period;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class CreateMember2 {
+public class CreateMember2 { // klasse for metoder tilhørende oprettelse af members
 
     Scanner sc = new Scanner(System.in);
     boolean isMotionist;
     HashMap<Integer, Member> memberList = new HashMap<Integer, Member>();
     static int memberNumber = 10;
 
-    public void createMember() {
+    public void createMember() { //metoden som spørg om alt info den har behov for til at oprette et medlem
 
         System.out.println("Hi Welcome to create new Member");
         System.out.println("What is the first name of the member?");
@@ -35,28 +35,28 @@ public class CreateMember2 {
         System.out.println("What kind of membership has the member (Active = 1 or Passive = 2)");
         boolean isActive = sc.nextInt() == 1;
 
-        if (isActive) {
+        if (isActive) { // hvis aktiv, så hvilken aktiv medlem er.
             System.out.println("Is the member a Motionist swimmer or a Competetive (1 = Motionist or 2 = Competitive )");
             isMotionist = sc.nextInt() == 1;
         }
         memberNumber++;
-        System.out.println("Member " + memberNumber + " created");
+        System.out.println("Member " + memberNumber + ": " +  firstName +" is created"); //
         memberList.put(memberNumber, new Member(memberNumber, firstName, lastName, day, month, year, gender, isUnder18(day, month, year), false, isMotionist, isActive, true, price(isOver60(day, month, year), isUnder18(day, month, year), isActive)));
     }
 
-    public boolean isUnder18(int day, int month, int year) {
+    public boolean isUnder18(int day, int month, int year) { // tjekker om medlemmet er under 18.
         LocalDate date = LocalDate.of(year, month, day);
         LocalDate today = LocalDate.now();
         return Period.between(date, today).getYears() < 18;
     }
 
-    public boolean isOver60(int day, int month, int year) {
+    public boolean isOver60(int day, int month, int year) { //tjekker om medlemmet er over 60
         LocalDate date = LocalDate.of(year, month, day);
         LocalDate today = LocalDate.now();
         return Period.between(date, today).getYears() >= 60;
     }
 
-    public int price(boolean over60, boolean under18, boolean isActive) {
+    public int price(boolean over60, boolean under18, boolean isActive) { // udregner selv prisen for medlemmerne ud fra de oplysninger vi modtager
         int price = 1;
         if (!isActive) {
             price = 500;
@@ -74,7 +74,7 @@ public class CreateMember2 {
         return price;
     }
 
-    public void printMemberList() {
+    public void printMemberList() { // metode til at printe medlemmer af foreningen
         System.out.println("Hi Welcome to member site\n" +
                 "Here is all the members for the union\n" + " ");
 
@@ -87,7 +87,7 @@ public class CreateMember2 {
                     + "/" + memberList.get(key).year + "\n");
         }
     }
-
+        // printer hvem der skylder penge og hvor meget der er betalt og hvor meget der skyldes
     public void printInvoices() {
         System.out.println("Hi Welcome to Invoice site\n" +
                 "Here are all the invoices\n");
@@ -124,23 +124,39 @@ public class CreateMember2 {
 
     }
 
-    public void printmembers() {
-        System.out.println("Here is all the members");
+    public void printmembersu18() {
+        System.out.println("Here is all the members who are competetive and can be made records to under 18 ");
         for (Integer key : memberList.keySet()) {
-            System.out.println(key + ": " + "First Name: "
-                    + memberList.get(key).firstName + " Last Name: "
-                    + memberList.get(key).lastName + " Date of birth: "
-                    + memberList.get(key).day + "/" + memberList.get(key).month + "/" + memberList.get(key).year + "\n");
+            Member member = memberList.get(key);
+            if (!member.isMotionist() && member.isUnder18()) {
+                System.out.println(key + ": " + "First Name: "
+                        + member.getFirstName() + " Last Name: "
+                        + member.getLastName() + " Date of birth: "
+                        + member.getDay() + "/" + member.getMonth() + "/" + member.getYear() + "\n");
+
+            }
+
 
         }
-
-
     }
+        public void printmemberso18() {
+            System.out.println("Here is all the members who are competetive and can be made records to over 18 ");
+            for (Integer key : memberList.keySet()) {
+                Member member = memberList.get(key);
+                if (!member.isMotionist() && !member.isUnder18()) {
+                    System.out.println(key + ": " + "First Name: "
+                            + member.getFirstName() + " Last Name: "
+                            + member.getLastName() + " Date of birth: "
+                            + member.getDay() + "/" + member.getMonth() + "/" + member.getYear() + "\n");
 
+                }
+            }
+        }
+        // getter til at modtage hashmappet oplysninger
     public HashMap<Integer, Member> getMemberList() {
         return memberList;
     }
-
+        //metode der bruges længere oppe til at printe hvor mange penge der skyldes og der er betalt
     public void printPaymentStatus() {
         int paidinvoices = 0;
         int unpaidinvoices = 0;
@@ -158,33 +174,33 @@ public class CreateMember2 {
                 + "\nUnpaid invoices: " + unpaidinvoices + ",- DKK");
 
     }
-
+        // metode til at aflæse csv fil til at plugge medlemmer ind.
     public void loadMembers() {
         String allMembers = "allmembers1.csv";
         String line;
         String csvSplitBy = ";";
 
         try (BufferedReader br = new BufferedReader(new FileReader(allMembers))) {
-            br.readLine(); // Skip header line
+            br.readLine(); // læser første linje
 
             while ((line = br.readLine()) != null) {
                 try {
                     String[] members = line.split(csvSplitBy);
 
-                    // Ensure that the CSV has the correct number of fields
+                    // Tjekker om der er nok oplysninger til at plugge medlemmerne ind
                     if (members.length != 13) {
                         System.out.println("Skipping line due to incorrect number of fields: " + line);
                         continue;
                     }
 
-                    int memberName = Integer.parseInt(members[0]);
+                    int memberNumber = Integer.parseInt(members[0]);
                     String firstName = members[1];
                     String lastName = members[2];
                     int dayOfBirth = Integer.parseInt(members[3]);
                     int monthOfBirth = Integer.parseInt(members[4]);
                     int yearOfBirth = Integer.parseInt(members[5]);
 
-                    // Validate day, month, and year of birth
+                    // sikre sig at medlemmerne har korrekte fødselsdage
                     if (dayOfBirth < 1 || dayOfBirth > 31 || monthOfBirth < 1 || monthOfBirth > 12 || yearOfBirth < 1900 || yearOfBirth > 2100) {
                         System.out.println("Skipping line due to invalid date of birth: " + line);
                         continue;
@@ -199,44 +215,10 @@ public class CreateMember2 {
                     int price = Integer.parseInt(members[12]);
 
                     // Assuming that the memberName is unique and can be used as a key
-                    memberList.put(memberName, new Member(memberName, firstName, lastName, dayOfBirth, monthOfBirth, yearOfBirth, gender, under18, over60, isMotionist, isActive, restance, price));
+                    memberList.put(memberNumber, new Member(memberNumber, firstName, lastName, dayOfBirth, monthOfBirth, yearOfBirth, gender, under18, over60, isMotionist, isActive, restance, price));
                 } catch (NumberFormatException e) {
                     System.out.println("Skipping line due to number format issue: " + line);
                 }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void saveMembersToFile() {
-        String allMembers = "allmembers1.csv";
-
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(allMembers))) {
-
-            for (Member member : getMemberList().values()) {
-                while (!member.getFirstName().isEmpty() || !member.getLastName().isEmpty() || !member.getGender().isEmpty())
-                {       BufferedReader bwr = new BufferedReader(new FileReader(allMembers));
-                    bwr.readLine();
-                    System.out.println("Skipping member due to filled field(s): " + member.getMemberNumber());
-                }
-
-                StringBuilder sb = new StringBuilder();
-                sb.append(member.getMemberNumber()).append(";");
-                sb.append(member.getFirstName()).append(";");
-                sb.append(member.getLastName()).append(";");
-                sb.append(member.getDay()).append(";");
-                sb.append(member.getMonth()).append(";");
-                sb.append(member.getYear()).append(";");
-                sb.append(member.getGender()).append(";");
-                sb.append(member.isUnder18()).append(";");
-                sb.append(member.isOver60()).append(";");
-                sb.append(member.isMotionist()).append(";");
-                sb.append(member.isActive()).append(";");
-                sb.append(member.isRestance()).append(";");
-                sb.append(member.getPrice()).append("\n");
-
-                bw.write(sb.toString());
             }
         } catch (IOException e) {
             e.printStackTrace();

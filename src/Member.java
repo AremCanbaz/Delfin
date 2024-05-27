@@ -1,4 +1,5 @@
-public class Member {
+
+public class Member { // parentklasse for konstruktøren  til medlemmer
 
     int memberNumber;
     String firstName;
