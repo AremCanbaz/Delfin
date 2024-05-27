@@ -17,9 +17,11 @@ public class Main{
             switch (answer) {
                 case 1: {
                     createMember2.createMember();
+                    createMember2.saveMembersToFile();
                     break;
                 }
                 case 2: {
+                    createMember2.loadMembers();
                     createMember2.printMemberList();
                     break;
                 }

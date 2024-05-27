@@ -1,21 +1,16 @@
+import java.io.*;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.HashMap;
-
 import java.util.Scanner;
 
 public class CreateMember2 {
+
     Scanner sc = new Scanner(System.in);
     boolean isMotionist;
     HashMap<Integer, Member> memberList = new HashMap<Integer, Member>();
-    static int memberNumber = 0;
-    public CreateMember2() {
-        // Add some dummy members for testing
-        memberList.put(1, new Member(1, "John", "Doe", 15, 5, 2005, "Male", true, false, true, false, true, 1600));
-        memberList.put(2, new Member(2, "Jane", "Smith", 20, 3, 1990, "Female", false, true, true, false, true, 1600));
-        memberList.put(3, new Member(3,"Arem","Canbaz",10,4,2001,"Other",false, true, true, false, true, 1600));
-        CreateMember2.memberNumber = 3;
-    }
+    static int memberNumber = 10;
+
     public void createMember() {
 
         System.out.println("Hi Welcome to create new Member");
@@ -115,10 +110,9 @@ public class CreateMember2 {
             memberNumber = sc.nextInt();
             if (memberList.containsKey(memberNumber)) {
                 Member member = memberList.get(memberNumber);
-                if (member.restance == true){
-                member.restance = false;
-                }
-                else {
+                if (member.restance == true) {
+                    member.restance = false;
+                } else {
                     member.restance = true;
                 }
                 System.out.println("Invoice status for member " + memberNumber + " has been updated to = " + member.restance);
@@ -146,25 +140,109 @@ public class CreateMember2 {
     public HashMap<Integer, Member> getMemberList() {
         return memberList;
     }
+
     public void printPaymentStatus() {
         int paidinvoices = 0;
         int unpaidinvoices = 0;
         for (Integer key : memberList.keySet()) {
             Member member = memberList.get(key);
-                if (member.isRestance()) {
-                    unpaidinvoices += member.getPrice();
-                }
-                else {
-                    paidinvoices += member.getPrice();
-                }
-
+            if (member.isRestance()) {
+                unpaidinvoices += member.getPrice();
+            } else {
+                paidinvoices += member.getPrice();
             }
-                System.out.println("Here is the total of invoices paid and unpaid :)\n" +
+
+        }
+        System.out.println("Here is the total of invoices paid and unpaid :)\n" +
                 "Paid invoices: " + paidinvoices + ",- DKK"
                 + "\nUnpaid invoices: " + unpaidinvoices + ",- DKK");
 
+    }
+
+    public void loadMembers() {
+        String allMembers = "allmembers1.csv";
+        String line;
+        String csvSplitBy = ";";
+
+        try (BufferedReader br = new BufferedReader(new FileReader(allMembers))) {
+            br.readLine(); // Skip header line
+
+            while ((line = br.readLine()) != null) {
+                try {
+                    String[] members = line.split(csvSplitBy);
+
+                    // Ensure that the CSV has the correct number of fields
+                    if (members.length != 13) {
+                        System.out.println("Skipping line due to incorrect number of fields: " + line);
+                        continue;
+                    }
+
+                    int memberName = Integer.parseInt(members[0]);
+                    String firstName = members[1];
+                    String lastName = members[2];
+                    int dayOfBirth = Integer.parseInt(members[3]);
+                    int monthOfBirth = Integer.parseInt(members[4]);
+                    int yearOfBirth = Integer.parseInt(members[5]);
+
+                    // Validate day, month, and year of birth
+                    if (dayOfBirth < 1 || dayOfBirth > 31 || monthOfBirth < 1 || monthOfBirth > 12 || yearOfBirth < 1900 || yearOfBirth > 2100) {
+                        System.out.println("Skipping line due to invalid date of birth: " + line);
+                        continue;
+                    }
+
+                    String gender = members[6];
+                    boolean under18 = Boolean.parseBoolean(members[7]);
+                    boolean over60 = Boolean.parseBoolean(members[8]);
+                    boolean isMotionist = Boolean.parseBoolean(members[9]);
+                    boolean isActive = Boolean.parseBoolean(members[10]);
+                    boolean restance = Boolean.parseBoolean(members[11]);
+                    int price = Integer.parseInt(members[12]);
+
+                    // Assuming that the memberName is unique and can be used as a key
+                    memberList.put(memberName, new Member(memberName, firstName, lastName, dayOfBirth, monthOfBirth, yearOfBirth, gender, under18, over60, isMotionist, isActive, restance, price));
+                } catch (NumberFormatException e) {
+                    System.out.println("Skipping line due to number format issue: " + line);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
+    public void saveMembersToFile() {
+        String allMembers = "allmembers1.csv";
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(allMembers))) {
+
+            for (Member member : getMemberList().values()) {
+                while (!member.getFirstName().isEmpty() || !member.getLastName().isEmpty() || !member.getGender().isEmpty())
+                {       BufferedReader bwr = new BufferedReader(new FileReader(allMembers));
+                    bwr.readLine();
+                    System.out.println("Skipping member due to filled field(s): " + member.getMemberNumber());
+                }
+
+                StringBuilder sb = new StringBuilder();
+                sb.append(member.getMemberNumber()).append(";");
+                sb.append(member.getFirstName()).append(";");
+                sb.append(member.getLastName()).append(";");
+                sb.append(member.getDay()).append(";");
+                sb.append(member.getMonth()).append(";");
+                sb.append(member.getYear()).append(";");
+                sb.append(member.getGender()).append(";");
+                sb.append(member.isUnder18()).append(";");
+                sb.append(member.isOver60()).append(";");
+                sb.append(member.isMotionist()).append(";");
+                sb.append(member.isActive()).append(";");
+                sb.append(member.isRestance()).append(";");
+                sb.append(member.getPrice()).append("\n");
+
+                bw.write(sb.toString());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
 
 
