@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb89504b-903e-4182-acf2-3d74f86a5be7" name="Changes" comment="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;">
+      <change afterPath="$PROJECT_DIR$/src/PrintingBestDisciples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RecordsTournament.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RecordsTraining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CompetetiveSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompetetiveSwimmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateCompetitiveSwimmers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateCompetitiveSwimmers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateMember2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateMember2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AC25-C&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AC25-C/Delfin3.git&quot;,
+    &quot;accountId&quot;: &quot;db5e5fba-7e16-4f90-98bb-4555877679a9&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2fuRsSms8fiS5a505s9qpH17QoR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/arem_/IdeaProjects/Delfin2/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/arem_/IdeaProjects/Delfin2/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arem_\IdeaProjects\Delfin2\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\arem_\IdeaProjects\Delfin2" />
+      <recent name="C:\Users\arem_\IdeaProjects\Delfin2\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Delfin2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb89504b-903e-4182-acf2-3d74f86a5be7" name="Changes" comment="" />
+      <created>1714649185334</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714649185334</updated>
+      <workItem from="1714649186491" duration="4189000" />
+      <workItem from="1714740031407" duration="3739000" />
+      <workItem from="1714787708810" duration="9333000" />
+      <workItem from="1714848850956" duration="183000" />
+      <workItem from="1714849071241" duration="1886000" />
+      <workItem from="1714989712402" duration="4156000" />
+      <workItem from="1714997694457" duration="96000" />
+      <workItem from="1715023245470" duration="1352000" />
+      <workItem from="1715078307641" duration="7101000" />
+      <workItem from="1715166209056" duration="42512000" />
+      <workItem from="1715774082204" duration="9285000" />
+      <workItem from="1715786337339" duration="5548000" />
+      <workItem from="1716293288828" duration="19655000" />
+      <workItem from="1716549086821" duration="10074000" />
+      <workItem from="1716641947396" duration="6302000" />
+      <workItem from="1716767460377" duration="9446000" />
+      <workItem from="1716821379485" duration="2500000" />
+      <workItem from="1716839427892" duration="20339000" />
+    </task>
+    <task id="LOCAL-00001" summary="Ny klasse for at implementere CreateMember knappen. kan bare ikke få lortet til at fungere, sikke noget pis..">
+      <option name="closed" value="true" />
+      <created>1714743606740</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714743606740</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ny klasse for at implementere CreateMember knappen. kan bare ikke få lortet til at fungere, sikke noget pis..">
+      <option name="closed" value="true" />
+      <created>1714743635100</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714743635100</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Konstruktør til member, og child klasse til Konkurrencesvømmere.&#10;Forventer at lave child klassen for kontigenter imorgen muligvis.">
+      <option name="closed" value="true" />
+      <created>1714793510893</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714793510893</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Konstruktør til member, og child klasse til Konkurrencesvømmere.&#10;Forventer at lave child klassen for kontigenter imorgen muligvis.">
+      <option name="closed" value="true" />
+      <created>1714793639690</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714793639690</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Ny subklasse til member. test af getprice() mangler lidt endnu.">
+      <option name="closed" value="true" />
+      <created>1714826927857</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714826927857</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Lavet hele framet, dog skal der finpudsning til samt at komponenterne for fremvisning af data skal indsættes.">
+      <option name="closed" value="true" />
+      <created>1714850729112</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714850729112</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Rettelse af Frame til Panel i navne, mangler at ændre konstruktør til let læseligt.">
+      <option name="closed" value="true" />
+      <created>1714997600594</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714997600594</updated>
+    </task>
+    <task id="LOCAL-00008" summary="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;">
+      <option name="closed" value="true" />
+      <created>1715085729378</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715085729378</updated>
+    </task>
+    <task id="LOCAL-00009" summary="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;">
+      <option name="closed" value="true" />
+      <created>1715816259398</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715816259398</updated>
+    </task>
+    <task id="LOCAL-00010" summary="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;">
+      <option name="closed" value="true" />
+      <created>1716496537341</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1716496537341</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;">
+      <option name="closed" value="true" />
+      <created>1716741446344</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716741446345</updated>
+    </task>
+    <task id="LOCAL-00012" summary="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;">
+      <option name="closed" value="true" />
+      <created>1716813315874</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716813315875</updated>
+    </task>
+    <task id="LOCAL-00013" summary="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;">
+      <option name="closed" value="true" />
+      <created>1716825224954</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716825224954</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ny klasse for at implementere CreateMember knappen. kan bare ikke få lortet til at fungere, sikke noget pis.." />
+    <MESSAGE value="Konstruktør til member, og child klasse til Konkurrencesvømmere.&#10;Forventer at lave child klassen for kontigenter imorgen muligvis." />
+    <MESSAGE value="Ny subklasse til member. test af getprice() mangler lidt endnu." />
+    <MESSAGE value="Lavet hele framet, dog skal der finpudsning til samt at komponenterne for fremvisning af data skal indsættes." />
+    <MESSAGE value="Rettelse af Frame til Panel i navne, mangler at ændre konstruktør til let læseligt." />
+    <MESSAGE value="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
