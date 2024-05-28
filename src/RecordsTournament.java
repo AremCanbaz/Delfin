@@ -1,4 +1,4 @@
-public class RecordsTournament extends CompetetiveSwimmer{
+public class RecordsTournament extends CompetetiveSwimmer{ // suklasse til konkurrence svømmere
     String convention;
     double time;
     int tournementDay;

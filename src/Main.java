@@ -2,8 +2,7 @@ import java.util.Scanner;
 public class Main{
 
     static CreateMember2 createMember2 = new CreateMember2();
-    static CreateCompetitiveSwimmers createCompetitiveSwimmers = new CreateCompetitiveSwimmers(createMember2);
-    static PrintingBestDisciples printingBestDisciples = new PrintingBestDisciples();
+    static CreateCompetitiveSwimmers createCompetitiveSwimmers = new CreateCompetitiveSwimmers(createMember2); // plugge tingene ind til main.
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         while (true) {
@@ -15,17 +14,17 @@ public class Main{
                     "4 creating a competitive swimmer under 18\n" +
                     "5 creating a competitive swimmer over 18\n" +
                     "6 Creating a record for the a competetive swimmer\n" +
-                    "8 = View the best 5 records for all disciples");
+                    "7 = View the best 5 records for all disciples");
             int answer = 0;
             answer = sc.nextInt();
-            switch (answer) {
+            switch (answer) { // switch til at fungere som en menu til at komme frem og tilbage på de forskellige metoder.
                 case 1: {
-                    createMember2.createMember();
+                    createMember2.createMember(); // oprettelse af medlemmer metoden hentet fra createMember2 klasse
                     break;
                 }
                 case 2: {
-                    createMember2.loadMembers();
-                    createMember2.printMemberList();
+                    createMember2.loadMembers(); // plugger dummy medlemmer ind for at køre programmet og teste.
+                    createMember2.printMemberList();// printer alle dummy medlemmer og ekstra tilføjet medlemmer.
                     break;
                 }
                 case 3: {
@@ -53,7 +52,7 @@ public class Main{
                     }
                     }
 
-                case 7: {
+                case 7: { // menu for at tilgå hvilken disciplin man vælge fremhæve.
                     System.out.println("You can see all the records here for tournaments or personal records\n" +
                             "Under 18 personal records = 1\n" +
                             "Under 18 Tournaments records = 2\n" +
@@ -81,7 +80,7 @@ public class Main{
 
                 default:
                     System.out.println("Wrong choice, try again!\n"+
-                            "Remember to use a number this time:) ");
+                            "Remember to use a number this time :) ");
             }
         }
 

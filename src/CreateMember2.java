@@ -9,7 +9,7 @@ public class CreateMember2 { // klasse for metoder tilhørende oprettelse af mem
     Scanner sc = new Scanner(System.in);
     boolean isMotionist;
     HashMap<Integer, Member> memberList = new HashMap<Integer, Member>();
-    static int memberNumber = 10;
+    static int memberNumber = 12;
 
     public void createMember() { //metoden som spørg om alt info den har behov for til at oprette et medlem
 

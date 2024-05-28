@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb89504b-903e-4182-acf2-3d74f86a5be7" name="Changes" comment="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;">
-      <change afterPath="$PROJECT_DIR$/src/PrintingBestDisciples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RecordsTournament.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RecordsTraining.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CompetetiveSwimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompetetiveSwimmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AllMembers.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AllMembers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allmembers1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/allmembers1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CreateCompetitiveSwimmers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateCompetitiveSwimmers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CreateMember2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateMember2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrintingBestDisciples.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RecordsTournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecordsTournament.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RecordsTraining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecordsTraining.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,9 @@
     &quot;accountId&quot;: &quot;db5e5fba-7e16-4f90-98bb-4555877679a9&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/CreateCompetitiveSwimmers.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -128,7 +132,7 @@
       <workItem from="1716641947396" duration="6302000" />
       <workItem from="1716767460377" duration="9446000" />
       <workItem from="1716821379485" duration="2500000" />
-      <workItem from="1716839427892" duration="20339000" />
+      <workItem from="1716839427892" duration="23219000" />
     </task>
     <task id="LOCAL-00001" summary="Ny klasse for at implementere CreateMember knappen. kan bare ikke få lortet til at fungere, sikke noget pis..">
       <option name="closed" value="true" />
@@ -234,7 +238,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716825224954</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;">
+      <option name="closed" value="true" />
+      <created>1716860934195</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1716860934195</updated>
+    </task>
+    <task id="LOCAL-00015" summary="rettelse af klasser, Kontigent.java er fjernet.&#10;Testning af priser, skal rettes til.&#10;Tested-by: AC25-C &lt;151057176+ac25-c@users.noreply.github.com&gt;">
+      <option name="closed" value="true" />
+      <created>1716860940329</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1716860940329</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

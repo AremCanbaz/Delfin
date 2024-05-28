@@ -1,4 +1,4 @@
-public class RecordsTraining extends CompetetiveSwimmer{
+public class RecordsTraining extends CompetetiveSwimmer{ // subklasse til konkurrence svømmere for at gøre tingene nemmere at oprette ting i metoden opret resultat.
     double trainingResultTime;
     int trainingResultDay;
     int trainingResultMonth;
